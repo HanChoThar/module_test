@@ -1,0 +1,88 @@
+@import "../node_modules/rfs/scss.scss";
+@import 'custom';
+
+  *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  .display-5{
+    @include font-size(4rem);
+   }
+  
+   .rfs{
+     font-size: 13px;
+   }
+
+  .heading-bg{
+    background-image: url('https://cdn.pixabay.com/photo/2020/02/05/09/57/namibia-4820682_960_720.jpg');
+    height: 80vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    &-nav {
+      padding: 40px;
+      color: white;
+      .navbar-brand{
+        font-size: 30px;
+        color: white;
+        margin-left: 35px;
+      }
+      .nav-item{
+        align-items: center;
+        color: white;
+        margin-right: 35px;
+        padding: 10px;
+
+        a{
+          color: yellow;
+          text-decoration: none;
+        }
+      }
+      .nav-item:nth-child(4){
+        background-color: violet;
+        border-radius: 50px;
+        cursor: pointer;
+
+        &:hover{
+          background-color: lighten( violet, 10%);
+        }
+      }
+    }
+  }
+
+  .bar{
+    color: white;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .col-md-6{
+    padding: 0%;
+  }
+
+  .project-text{
+    padding: 20% 10%;
+  }
+
+  .some{
+    width: 50%;
+    height: auot;
+    background-color: white;
+    position: absolute;
+    top: 40%;
+    left: 0%;
+  }
+
+
+  @media (max-width: 600px){
+    .col-md-6:nth-child(3){
+      order: 4;
+    }
+    .nav-item{
+      display: none;
+    }
+  }
